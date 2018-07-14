@@ -57,6 +57,7 @@ public class myJPanel extends JPanel implements ActionListener {
         upark.setBounds(new Rectangle(75,75,75,50));
         wbarre.setBounds(new Rectangle(100,50,75,50));
         brandywine.setBounds(new Rectangle(100,100,75,50));
+    }
         
     public void actionPerformed(ActionEvent event) {
         
