@@ -4,24 +4,37 @@ import java.awt.event.*;
 import javax.swing.event.*;
 
 public class myJPanelMap extends JPanel implements ActionListener {
-    
     JButton beaver,behrend, upark, wbarre, brandywine, menu;
-    
-        myJPanelBeaver pbeaver;
-        myJPanelBehrend pbehrend;
-        myJPanelUpark pupark;
-        myJPanelWbarre pwbarre;
-        myJPanelBrandywine pbrandywine;
-        myJPanel menupanel;
-        
-        
         
     public myJPanelMap() {
+        setLayout(null);
+        setBackground(Color.orange);
         
-        pbeaver = new myJPanelBeaver();
-        pbeaver.SubmitBeaver.addActionListener(this);
-        add(pbeaver);
-        
+            //Buttons!    
+        //beaver
+        beaver = new JButton("Beaver");
+        add(beaver);
+        beaver.setBounds(new Rectangle(50,50,175,50));
+        //behrend
+        behrend = new JButton("Behrend");
+        add(behrend);
+        behrend.setBounds(new Rectangle(250,50,175,50));
+        //upark
+        upark = new JButton("University Park");
+        add(upark);
+        upark.setBounds(new Rectangle(250,170,175,50));
+        //wbarre
+        wbarre = new JButton("Wilkes-Barre");
+        add(wbarre);
+        wbarre.setBounds(new Rectangle(250,300,175,50));
+        //brandywine
+        brandywine = new JButton("Brandywine");
+        add(brandywine);
+        brandywine.setBounds(new Rectangle(50,300,175,50));
+                
+            //panels
+        //add(pbeaver);
+        /*
         pbehrend = new myJPanelBehrend();
         pbehrend.SubmitBehrend.addActionListener(this);
         add(pbehrend);
@@ -36,16 +49,8 @@ public class myJPanelMap extends JPanel implements ActionListener {
         
         pbrandywine = new myJPanelBrandywine();
         pbrandywine.SubmitBrandywine.addActionListener(this);
-        add(pbrandywine);
-        
-        
-        beaver = new JButton("Beaver");
-        behrend = new JButton("Behrend");
-        upark = new JButton("University Park");
-        wbarre = new JButton("Wilkes-Barre");
-        brandywine = new JButton("Brandywine");
-        
-        setLayout(null);
+        add(pbrandywine);        
+               
         
         menu.addActionListener(this);
         add(menu);
@@ -58,33 +63,6 @@ public class myJPanelMap extends JPanel implements ActionListener {
         wbarre.addActionListener(this);
         add(wbarre);
         brandywine.addActionListener(this);
-        add(brandywine);
-        
-        
-        //x,y,length, height
-        beaver.setBounds(new Rectangle(50,100,75,50));
-        behrend.setBounds(new Rectangle(50,50,75,50));
-        upark.setBounds(new Rectangle(75,75,75,50));
-        wbarre.setBounds(new Rectangle(100,50,75,50));
-        brandywine.setBounds(new Rectangle(100,100,75,50));
+        add(brandywine);*/        
     }
-        
-    public void actionPerformed(ActionEvent event) {
-        
-        Object obj = event.getSource();
-        
-        if (obj == beaver) {  
-           add(pbeaver);
-           validate();
-           repaint();
-    }
-    
-        if (obj == pbeaver.SubmitBeaver) {
-           remove(pbeaver);
-           validate();
-           repaint();
-    }
-        
-    }
-    
 }
