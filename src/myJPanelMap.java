@@ -3,8 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 public class myJPanelMap extends JPanel implements ActionListener {
-    ImageIcon iconmap;
-    Image map;
+    
     JButton beaver,behrend, upark, wbarre, brandywine, menu;
         
     public myJPanelMap() {
